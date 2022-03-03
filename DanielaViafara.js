@@ -21,6 +21,7 @@ function wordCutter(word) {
 }
 wordCutter(testWord);
 
+//ejercicio #2
 /*Dado un string buscar en un listado e indicar si se encuentra o no
 ahí contenido, debe soportar mayúsculas y minúsculas sin importar
 la variación, es lo mismo Carro, CARRO o carro.*/
@@ -55,7 +56,7 @@ wordSearcherIgnoreCase(testTargetWordB,testWordsList);
 wordSearcherIgnoreCase(testTargetWordC,testWordsList);
 
 
-
+//ejercicio #3
 /*Dado un arreglo de strings, retornar la palabra más larga,
 la más corta y el tamaño promedio, el arreglo debe ser
 entregado por parámetro y puede variar en cantidad de palabras
@@ -95,6 +96,8 @@ function wordLengthClassifier(wordsList) {
 }
 console.log(wordLengthClassifier(testSampleList))
 
+
+//ejercicio #4
 /*Dado un string retorna si este es o no un palíndromo. No debe diferenciar entre mayúsculas y minúsculas*/
 
 let onVerificationWordA = "reconocer";
@@ -103,10 +106,21 @@ let onVerificationWordC = "Gomosos";
 let onVerificationWordD = "Somos";
 
 function palindromeVerifier(word) {
-   // :)
+    let poliWord = word.toLowerCase().split("").reverse().join("");
+    if (poliWord === word) {
+        console.log("The Word" + word + "is polidrome")
+    } else {
+        console.log("The Word" + word + "in not polindrome")
+    }
 }
 
+palindromeVerifier (onVerificationWordA);
+palindromeVerifier (onVerificationWordB);
+palindromeVerifier (onVerificationWordC);
+palindromeVerifier (onVerificationWordD);
 
+
+//ejercicio #5
 /*Dado un objeto que contiene una lista de palabras contar el
 número de letras vocales y consonantes y retornarlo en un arreglo de 2 posiciones.*/
 let containerTestObject = {
