@@ -142,7 +142,7 @@ function arrayJoiner(listA, listB) {
 }
 arrayJoiner(wordArrayA, wordArrayB);
 
-
+//ejercicio #7
 /*Dado un arreglo de strings indicar qué posiciones del arreglo
 son anagramas de una palabra base (recibida como parámetro), retorne las posiciones en un arreglo.*/
 
@@ -150,7 +150,15 @@ let testWordToExplore = "amar";
 let wordsToVerify = ["amar", "arma", "rana" , "mara", "rama", "roma", "amor", "ramon", "omar"];
 
 function anagramVerifier(wordToExplore, listOfWords) {
-   // :)
+let posicionesAnagrama = []
+listOfWords.forEach((word,num) => {
+    const palabraArrayOrdenada = word.split("").sort().join("")
+    const palabraMetodoOrdenada = wordToExplore.split("").sort().join("")
+    if (palabraArrayOrdenada === palabraMetodoOrdenada){
+    posicionesAnagrama.push(num)
+   }
+})
+return posicionesAnagrama
 }
 
 /*Dado un objeto que contiene 2 arreglos, retornar un objeto con 1
